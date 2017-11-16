@@ -1,2 +1,5 @@
 # Interactive-Graphics-on-the-Web
 Project 4 for IGME230
+
+## Proposal
+I would like to create an interactive landscape that begins with a main page containing three main clickable elements – a worm, a tree, and a flower. If time allows, I would like to make the three main graphic elements sway back and forth to add more dimension and interest to the main page. When a user clicks on one of the three elements, it will bring them to a new page. Each of the three sub-pages will contain a button that toggles to start or stop the animation, a button to refresh the graphic, and a button to return to the homepage. These buttons should be stylized to fit the feel of the page. The worm-page will show a graphic of a worm wiggling through a maze and off the page. The tree-page will show a tree that, when clicked, wiggles and shakes apples off it and onto the ground. This page may also have buttons to change color of the apples. Lastly, the flower-page will focus on a bee flying in from the left side of the screen, rubbing into the flower to get pollen, and then flying out the right side of the screen. 
