@@ -1,4 +1,4 @@
-# Interactive-Graphics-on-the-Web
+# InteractiveWebGraphics
 Project 4 for IGME230
 
 ## Proposal
