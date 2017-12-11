@@ -1,0 +1,15 @@
+body{
+			  background-color: #79A3CC;
+			  font-family: 'Lato', sans-serif;
+}
+h1{
+			  text-align: center;
+			  font-family: 'Lobster', cursive;
+			  color: #EEEEEE;
+ 				font-size:2em;
+			  font-family: 'Lobster', cursive;
+			  text-shadow: 
+				  -1px -1px 0px #bfbfbf, 
+    				3px 3px 0px #bfbfbf,
+				  7px 7px 0px #666666;
+}
