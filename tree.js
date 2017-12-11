@@ -56,3 +56,31 @@ var orchard = s.group(apple1, apple2, apple3, apple4, apple5, apple6, apple7);
 orchard.attr({
 	fill: "#C02F2F"
 })
+
+var move = function(dx,dy) {
+        this.attr({
+                    transform: this.data('origTransform') + (this.data('origTransform') ? "T" : "t") + [dx, dy],
+			
+                });
+}
+
+var start = function() {
+    apple1.data('origTransform', this.transform().local );
+	apple2.data('origTransform', this.transform().local );
+	apple3.data('origTransform', this.transform().local );
+	apple4.data('origTransform', this.transform().local );
+	apple5.data('origTransform', this.transform().local );
+	apple6.data('origTransform', this.transform().local );
+	apple7.data('origTransform', this.transform().local );
+}
+var stop = function() {
+        console.log('finished dragging');
+}
+
+apple1.drag(move, start, stop );
+apple2.drag(move, start, stop );
+apple3.drag(move, start, stop );
+apple4.drag(move, start, stop );
+apple5.drag(move, start, stop );
+apple6.drag(move, start, stop );
+apple7.drag(move, start, stop );
