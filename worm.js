@@ -48,24 +48,36 @@ var stem = s.rect(700, 0, 100, 50);
 stem.attr({
 	fill: "#002600"
 })
+var refresh = function(){
+    wormbod.animate({transform: 'translate(0, 0)'}, 1500, mina.easein);
+    wormhead.animate({transform: 'translate(0, 0)'}, 1500, mina.easein);
+    wormeye.animate({transform: 'translate(0, 0)'}, 1500, mina.easein);
+    brim.animate({transform: 'translate(0, 0)'}, 1500, mina.easein);
+    hattop.animate({transform: 'translate(0, 0)'}, 1500, mina.easein);
+}
+stem.click(refresh);
 
-////worm
-//var wormbod = s.ellipse(100, 580, 30, 10);
-//var wormhead = s.circle(130, 575, 10);
-//var worm = s.group(wormbod, wormhead);
-//worm.attr({
-//	fill:"#8B6743"
-//})
-//var wormeye = s.circle(135, 575, 2);
-//wormeye.attr({
-//	fill:"000000"
-//})
-//
-////hat
-//var brim = s.rect(120, 563, 20, 5);
-//var hattop = s.rect(125, 555, 10, 10);
-//var hat = s.group(hattop, brim);
-//hat.attr({
-//	fill: "#000000"
-//})
 
+//worm
+var wormbod = s.ellipse(734, 336, 100, 25);
+var wormhead = s.circle(830, 318, 25);
+var worm = s.group(wormbod, wormhead);
+worm.attr({
+	fill:"#6D492B"
+})
+var wormeye = s.circle(844, 314, 4);
+var brim = s.rect(805, 290, 50, 10);
+var hattop = s.rect(815, 270, 30, 20);
+
+var wiggleworm = function(){
+    wormbod.animate({transform: 'translate(470, 0)'}, 1500, mina.easein);
+    wormhead.animate({transform: 'translate(470, 0)'}, 1500, mina.easein);
+    wormeye.animate({transform: 'translate(470, 0)'}, 1500, mina.easein);
+    brim.animate({transform: 'translate(470, 0)'}, 1500, mina.easein);
+    hattop.animate({transform: 'translate(470, 0)'}, 1500, mina.easein);
+}
+wormbod.click(wiggleworm);
+wormeye.click(wiggleworm);
+wormhead.click(wiggleworm);
+brim.click(wiggleworm);
+hattop.click(wiggleworm);
