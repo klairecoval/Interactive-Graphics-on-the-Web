@@ -28,10 +28,12 @@ center.attr({
 	fill:"#432e13"
 });
 petal = s.path('M85,40 C40,60,-80,335,100,300 C100,300,320,330,85 40z');
+
 petal.attr({
   fill:"#FEE5AC",
   class:"petal"
 });
+
 //Clone and add more petals to the DOM
 while(i < howmany){
 		petals = petal.clone();
@@ -58,9 +60,6 @@ g.after(center);
 
 
 
-
-
-
 //bee\\
 var stinger = s.polygon(20, 500, 43, 490, 43, 510);
 
@@ -75,7 +74,7 @@ var wing2 = s.ellipse(95, 445, 8, 12);
 var wings = s.group(wing1, wing2);
 wings.attr({
 	fill: "#EFEFEF",
-	stroke:"#000000"
+	stroke:"#000000", 
 })
 
 var stripe1 = s.rect(67, 460, 10, 80);
@@ -89,3 +88,12 @@ mouth.attr({
 	strokeWidth: "2",
 	strokeLinecap: "round"
 })
+
+bod.mouseover(
+	function()
+	{
+		console.log("over bee");
+		wing1.transform("t10, 0");
+		wing2.transform("t10, 0");
+	}
+)
