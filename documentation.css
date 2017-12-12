@@ -1,0 +1,117 @@
+/*Import Lato font from Google*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*Make background color blue for more cohesion between SVG and HTML document,
+Make Lato the font for all body text,
+Center content and set maximum width*/
+body{
+	background-color: #79A3CC;
+	font-family: 'Lato', sans-serif;
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+/*Center text to center of their divs*/
+h1, p{
+	text-align: center;
+}
+
+/*Remove link underlining,
+Make link color match the rest of the text and not be blue*/
+a{
+	text-decoration: none;
+	color: #5E3881;
+}
+
+/*Remove bullets in list*/
+ul{
+	list-style: none;
+}
+
+/********BUTTON********/
+/*Center button,
+Remove border and make button rectangular,
+Center text to middle of button and remove link underlining,
+Set font size,
+Make corners curved,
+Ease transition*/
+#home{
+	margin: 0 auto;
+    border: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+	border-radius: 10px;
+	margin-bottom: 4em;
+	display: block;
+	margin-top: 2em;
+	transition: color 1s ease;
+	transition: background 1s ease;
+}
+
+/*Set background color to green when hovered over,
+Make cursor a pointer,
+Make text white,
+Ease transition*/
+#home:hover {
+    background-color: #518251;
+	cursor: pointer;
+	color: #FFFFFF;
+	transition: color 1s ease;
+	transition: background 1s ease;
+}
+
+/********FLEX BOX********/
+/*Flex the content*/
+.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/*Set background color and flex the content,
+Set font family to Lato*/
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+	background-color: #79A3CC;
+	font-family: 'Lato', sans-serif;
+}
+
+/*Flex the center content*/
+.HolyGrail-content {
+  flex: 1;
+}
+
+/*Flex side columns even though they containt no content*/
+.HolyGrail-nav, .HolyGrail-ads {
+  flex: 0 0 12em;
+}
+
+/*Put nav on left*/
+.HolyGrail-nav {
+  order: -1;
+}
+
+/*Set up into columns*/
+.HolyGrail,
+.HolyGrail-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/********MEDIA********/
+/*For small screens, flex in rows*/
+@media (min-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .HolyGrail-content {
+    flex: 1;
+  }
+  .HolyGrail-nav, .HolyGrail-ads {
+    flex: 0 0 12em;
+  }
+}
