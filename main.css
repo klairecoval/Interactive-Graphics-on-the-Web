@@ -1,15 +1,57 @@
+/*Import Lato font from Google*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*Make background color blue to match SVG color to look more cohesive,
+Make Lato the font for all text*/
 body{
-			  background-color: #79A3CC;
-			  font-family: 'Lato', sans-serif;
+	background-color: #79A3CC;
+	font-family: 'Lato', sans-serif;
 }
-h1{
-			  text-align: center;
-			  font-family: 'Lobster', cursive;
-			  color: #EEEEEE;
- 				font-size:2em;
-			  font-family: 'Lobster', cursive;
-			  text-shadow: 
-				  -1px -1px 0px #bfbfbf, 
-    				3px 3px 0px #bfbfbf,
-				  7px 7px 0px #666666;
+
+/*Center text to center of window,
+Shorten line height*/
+h1, h3, p{
+	text-align: center;
+	line-height: 70%;
+}
+
+/*Remove link underlining,
+Make link text black and not blue*/
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+/********BUTTON********/
+/*Center button,
+Remove border and make button rectangular,
+Center text to middle of button and remove link underlining,
+Set font size,
+Make corners curved,
+Ease transition*/
+#home{
+	margin: 0 auto;
+    border: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+	border-radius: 10px;
+	margin-bottom: 4em;
+	display: block;
+	margin-top: 2em;
+	transition: color 1s ease;
+	transition: background 1s ease;
+}
+
+/*Set background color to green when hovered over,
+Make cursor a pointer,
+Make text white,
+Ease transition*/
+#home:hover {
+    background-color: #518251;
+	cursor: pointer;
+	color: #FFFFFF;
+	transition: color 1s ease;
+	transition: background 1s ease;
 }
