@@ -4,54 +4,50 @@
     <meta charset="UTF-8">
     <title>project4</title>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script> 
-	  <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
-	  <style>
-		  body{
-/*			  background-color: #79A3CC;*/
-		  }
-		  h1{
-			  text-align: center;
-			  font-family: 'Lobster', cursive;
-			  color: #EEEEEE;
- 				font-size:2em;
-			  font-family: 'Lobster', cursive;
-			  text-shadow: 
-				  -1px -1px 0px #bfbfbf, 
-    				3px 3px 0px #bfbfbf,
-				  7px 7px 0px #666666;
-		  }
-	  </style>
+	  
+	  <link rel="stylesheet" href="documentation.css">
   </head>
-  <body>
+
+	  <body class="HolyGrail">
+  <header></header>
+  <div class="HolyGrail-body">
+    <main class="HolyGrail-content">
 	  <h1>Documentation</h1>
-      <svg id="svg"></svg>
-       <script>
-		   //setup drawing surface
-		   var s = Snap(1100, 730);
-
-		   //background 
-		   var sky = s.rect(0, 0, 1100, 730);
-		   sky.attr({
-				fill:"#79A3CC"
-		   })
-
-		   //create circles for tree leaves
-		   var circ1 = s.circle(500, 260, 80);
-		   var circ2 = s.circle(480, 240, 80);
-		   var circ3 = s.circle(500, 220, 80);
-		   var circ4 = s.circle(530, 260, 80);
-		   var circ5 = s.circle(550, 210, 80);
-		   var circ6 = s.circle(570, 240, 80);
-		   var circ7 = s.circle(590, 220, 80);
-		   var circ8 = s.circle(580, 260, 80);
-		   var circ9 = s.circle(600, 240, 80);
-
-		   //group leaves and make green
-		   var leaves = s.group(circ1, circ2, circ3, circ4, circ5, circ6, circ7, circ8, circ9);
-		   leaves.attr({
-				fill: "#004C00"
-		   });
-      </script>
-
-    </body>
+      <p>Font: <a href="https://fonts.google.com/specimen/Lato">Lato</a> from <a href="https://fonts.google.com/">Google Fonts</a><br>
+		Library: <a href="http://snapsvg.io/">Snap.SVG</a><br>
+		  GitHub: <a href="https://github.com/klairecoval/InteractiveWebGraphics">Interactive Web Graphics</a>
+		</p>
+		<h2><span style="border-bottom: 2px solid #FFCD57">Worm Page</span></h2>
+		<ul>
+			<li>When clicked, the worm moves off the screen to the right, looking like it moves through the tunnel and out of the window. This was achieved by creating Javascript functions that utilize the .animate handler of Snap.SVG and appending and calling the function to the graphics when they are clicked.</li>
+			<li>When one clicks the stem, the worm moves back into the screen and returns to his original position utilizing the same functionality as when the worm is clicked.</li>
+			<li>Both the stem and the worm body change color when hovered over to show they are interactive and can be clicked on.</li>
+		</ul>
+		<h2><span style="border-bottom: 2px solid #FF845B">Flower Page</span></h2>
+        <ul>
+			<li>Clicking on the center of the flower calls Javascript function that uses the .animate function of Snap.SVG to move the bee up and out of the SVG window, almost like he is flying away. </li>
+			<li>The stem can also be clicked on to return the bee to his original position in the window, and the two functions can be toggled to move the bee in and out.</li>
+			<li>The center of the flower and the stem shange color when hovered over to show interactivity.</li>
+		</ul>
+		<h2><span style="border-bottom: 2px solid #36434B">Tree Page</span></h2>
+        <ul>
+			<li>The apples on the tree may be dragged around the screen and places wherever one would like as they do not follow the rules of gravity. The draggability is achieved using jQuery.</li>
+			<li>If, at anytime, the user decides they do not like where the apples are, they can click the trunk of the tree to move the apples back to their original position in the window. Once again, this is achieved by using the .animate function of Snap.SVG contained in a function that focuses on transforming the x and y positions of whatever element is specified.</li>
+			<li>The trunk and the apples change color when hovered over to show interactivity.</li>
+		</ul>
+		<h2><span style="border-bottom: 2px solid #89BCB3">Above and Beyond</span></h2>
+		<ul>
+			<li>All images and content were created by myself, unless otherwise stated above. That means, every single graphic was coded by myself using <a href="http://snapsvg.io/">Snap.SVG.</a> Creating the SVGs was definitely the most tedious, challenging, and time-consuming part of this project for me. I taught myself how to use this Javascript library over the course of this project because it seemed like an interesting way to create SVGs without using Illustrator or Photoshop. </li>
+			<li>I used topics not discussed in class to animate the graphics, like complex .animate functions that focus on transforms. I also used Snap.SVG</li>
+			<li>I chose to keep the HTML and CSS fairly simple so that I could really focus on the SVGs and Javascript functionality.</li>
+		</ul>
+	  </main>
+    <nav class="HolyGrail-nav"></nav>
+    <aside class="HolyGrail-ads"></aside>
+  </div>
+  <footer>
+	  <!--Make button that loads home page when clicked -->
+		  <button id="home" type="button" onclick="window.location.href='index.html'">home</button>
+		  </footer>
+</body>
 </html>
